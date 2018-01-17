@@ -93,6 +93,7 @@
                     <ul id="appNav" class="nav nav-pills nav-stacked">
                         <li @if( Request::segment(2) == 'dashboard' ) class="active" @endif><a href="/admin/dashboard"><i class="fa fa-tachometer fa-fw"></i> Dashboard</a></li>
                         <li @if( Request::segment(2) == 'users' ) class="active" @endif><a href="/admin/users"><i class="fa fa-users fa-fw"></i> Users</a></li>
+                        <li @if( Request::segment(2) == 'texts' ) class="active" @endif><a href="/admin/texts"><i class="fa fa-book fa-fw"></i> Texts</a></li>
                     </ul>
                 </div>
             </div>
