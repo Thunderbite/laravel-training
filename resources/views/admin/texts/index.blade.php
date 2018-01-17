@@ -46,11 +46,11 @@
                 serverSide: true,
                 ajax: '/admin/texts/data',
                 columns: [
-                    {data: 'ID', name: 'ID'},
+                    {data: '_id', name: 'id'},
                     {data: 'keyword', name: 'keyword'},
                     {data: 'text', name: 'text'},
-                    {data: 'created', name: 'created'},
-                    {data: 'updated', name: 'updated'}
+                    {data: '_created', name: 'created',orderable: false},
+                    {data: '_updated', name: 'updated',orderable: false}
                 ],
             });
 

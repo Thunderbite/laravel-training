@@ -26,7 +26,7 @@ class TextsController extends Controller
      */
     public function data()
     {
-        return datatables()->of(Text::query())->toJson();
+        return datatables()->of(Text::select('id as _id', 'keyword', 'text', 'created_at as _created', 'updated_at as _updated'))->toJson();
     }
 
     /**
@@ -48,6 +48,11 @@ class TextsController extends Controller
      */
     public function store()
     {
+        // Validation
+        $this->validate(request(), [
+            'keyword' => 'required|max:30',
+            'text' => 'required|max:255',
+        ]);
         // Add the text
         $text = Text::create([
             'keyword' => request('keyword'),
