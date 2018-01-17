@@ -4,7 +4,7 @@
 
     <div class="row">
         <div id="moduleNav" class="col-sm-12 clearfix">
-            <a href="/admin/users/create" class="btn btn-success pull-right">Add Text</a>
+            <a href="/admin/texts/create" class="btn btn-success pull-right">Add Text</a>
         </div>
     </div>
 

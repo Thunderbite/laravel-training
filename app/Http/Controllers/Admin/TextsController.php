@@ -1,5 +1,5 @@
 <?php 
-namespace App\Http\Controllers\Texts;
+namespace App\Http\Controllers\Admin;
 
 use Hash;
 use App\Models\Text;
