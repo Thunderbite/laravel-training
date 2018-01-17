@@ -26,8 +26,7 @@ class TextsController extends Controller
      */
     public function data()
     {
-        return datatables()->of(Text::query())
-            ->toJson();
+        return datatables()->of(Text::query())->toJson();
     }
 
     /**
@@ -49,14 +48,10 @@ class TextsController extends Controller
      */
     public function store()
     {
-        // Created Date
-        $created = date('l jS \of F Y h:i:s A');
-
         // Add the text
         $text = Text::create([
             'keyword' => request('keyword'),
             'text' => request('text'),
-            'created' => make($created),
         ]);
 
         // Redirect with success message
@@ -76,6 +71,5 @@ class TextsController extends Controller
     {
     }
 
-    }
 }
 ?>

@@ -1,6 +1,6 @@
 <?php
 
-use App\Models\User;
+use App\Models\Text;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -12,7 +12,13 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        User::truncate();
+        Text::truncate();
+
+        Text::create([
+            'keyword' => 'example',
+            'text' => 'lorem ipsum',
+        ]);
+        /*User::truncate();
 
         User::create([
             'name' => 'Mark van der Putten',
@@ -29,6 +35,6 @@ class DatabaseSeeder extends Seeder
             'name' => 'Radu Tirnovan',
             'email' => 'radu@thunderbite.com',
             'password' => Hash::make('password')
-        ]);    
+        ]);*/    
     }
 }

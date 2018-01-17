@@ -18,6 +18,10 @@ Route::group(['namespace' => 'Admin', 'prefix' => 'admin', 'middleware' => ['aut
     // Users
     Route::get('users/data', 'UsersController@data');
     Route::resource('users', 'UsersController');
+
+    // Texts
+    Route::get('texts/data', 'TextsController@data');
+    Route::resource('texts', 'TextsController');
 });
 
 Route::get('/', 'FrontendController@index');
