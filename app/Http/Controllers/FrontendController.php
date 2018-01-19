@@ -15,23 +15,7 @@ class FrontendController extends Controller
         $request = new Request();
         return strtotime( $request->query($param, null) );
     }    
-
-    
-    public function checkDates($dates)
-    {
-        if (strtotime($dates[0])) {
-            $date[]=date('Y-m-d H:i:s', $dates[0]);
-        } else {
-            $date[]=false;
-        }
-        if (strtotime($dates[1])) {
-            $date[]=date('Y-m-d H:i:s', $dates[1]);
-        } else {
-            $date[]=false;
-        }
-        return $date;
-    }    
-    
+       
     public function getTexts( $from, $to ) 
     {
 	if ( $from && $to ) {
