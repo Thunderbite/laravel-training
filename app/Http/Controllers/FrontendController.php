@@ -12,10 +12,9 @@ class FrontendController extends Controller
 
     protected function getDate( $param )
     {
-        $request = new Request();
-        return strtotime( $request->query($param, null) );
+        return strtotime( request()->input($param) );
     }    
-       
+     
     public function getTexts( $from, $to ) 
     {
 	if ( $from && $to ) {
