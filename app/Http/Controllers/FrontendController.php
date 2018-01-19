@@ -39,12 +39,12 @@ class FrontendController extends Controller
     public function index()
     {
 
-	$from = $this->getDate( 'fromDate' );
-	$to = $this->getDate( 'toDate' );
+	$from = $this->getDate( 'fromdate' );
+	$to = $this->getDate( 'todate' );
 
         $config = [
             'message' => 'Hello World', 
-	    'texts' => $this->getTexts( $from, $to )
+	        'texts' => $this->getTexts( $from, $to )
         ];
 
         
