@@ -1,23 +1,8 @@
 <?php
 
-// Auth routes
-Route::prefix('admin')->group(function () {
-    Route::namespace('Admin')->group(function () {
-        Route::redirect('/', '/admin/dashboard', 301);
-    });
-    Route::get('/logout', 'Auth\LoginController@logout');
-    Auth::routes();
-});
+Route::get('threads', 'ThreadsController@index');
+Route::get('threads/{thread}', 'ThreadsController@show');
 
-// Admin routes
-Route::group(['namespace' => 'Admin', 'prefix' => 'admin', 'middleware' => ['auth']], function () {
-    // Dashboard
-    Route::get('dashboard/data', 'DashboardController@data');
-    Route::resource('dashboard', 'DashboardController');
+Auth::routes();
 
-    // Users
-    Route::get('users/data', 'UsersController@data');
-    Route::resource('users', 'UsersController');
-});
-
-Route::get('/', 'FrontendController@index');
+Route::get('/home', 'HomeController@index')->name('home');
