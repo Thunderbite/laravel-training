@@ -25,5 +25,11 @@ class DatabaseSeeder extends Seeder
             'email' => 'vlad@thunderbite.com',
             'password' => Hash::make('password')
         ]);
+
+        User::create([
+            'name' => 'Vlad Filip',
+            'email' => 'vlad@thunderbite.com',
+            'password' => Hash::make('password')
+        ]);
     }
 }

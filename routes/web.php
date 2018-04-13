@@ -21,3 +21,10 @@ Route::group(['namespace' => 'Admin', 'prefix' => 'admin', 'middleware' => ['aut
 });
 
 Route::get('/', 'FrontendController@index');
+
+//Test 
+Route::get('/threads', 'ThreadsController@index');
+Route::get('/threads/{thread}', 'ThreadsController@show');
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
